@@ -1,0 +1,172 @@
+/* Background image and overlay */
+body {
+  background-image: url('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=1470&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* Main container with glassmorphic feel */
+.game-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  background-color: #081b31;
+  color: #f0ecec;
+  height: 5rem;
+  line-height: 5rem;
+  border-radius: 10px;
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #081b31;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; /* reduced from 3rem */
+  margin-top: 5rem; /* reduced from 5rem */
+  flex-wrap: wrap;
+}
+
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 0rem; /* reduced from 3rem */
+  gap: 5rem; /* reduced from 5rem */
+}
+
+
+#user-score,
+#comp-score {
+  font-size: 4rem;
+}
+
+.msg-container {
+  margin-top: 0rem; /* reduced from 5rem */
+}
+
+
+#msg {
+  background-color: #081b31;
+  color: #fff;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px #000;
+}
+
+.timer {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #ffcccb;
+}
+
+.play-again,
+.start-game {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #007acc;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.play-again:hover,
+.start-game:hover {
+  background-color: #005b99;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.score p {
+  animation: bounce 0.3s ease;
+}
+.stop-game {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #dc3545;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.stop-game:hover {
+  background-color: #c82333;
+}
+.resume-game {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #17a2b8;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.resume-game:hover {
+  background-color: #117a8b;
+}
+
